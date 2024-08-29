@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebTech Indonesia</title>
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Header */
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header .logo {
+            display: inline-block;
+        }
+
+        header .menu {
+            float: right;
+            margin-top: 1.2rem;
+            margin-right: 1rem;
+        }
+
+        header .menu a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 15px;
+            transition: background-color 0.3s;
+        }
+
+        header .menu a:hover {
+            background-color: #444;
+        }
+
+        /* Banner */
+        .banner {
+            background-image: url('MEDIA_FILES/IMAGES/images\ \(10\).jpg'); /* Tambahkan gambar banner di sini */
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .banner h1 {
+            font-size: 50px;
+            margin: 0;
+        }
+
+        /* Gallery */
+        .gallery {
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .gallery img, .gallery video {
+            width: 200px;
+            height: 150px;
+            margin: 10px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        /* About */
+        .about {
+            padding: 50px 20px;
+            text-align: center;
+            background-color: #f4f4f4;
+                margin-bottom: 20px;
+                text-align: center; /* Tambahkan ini untuk membuat rata tengah */
+        }
+
+        .about h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .about p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        /* Sections */
+        section {
+            padding: 50px 20px;
+        }
+
+        .services {
+                background-color: #f4f4f4;
+                margin-bottom: 20px;
+                text-align: center; /* Tambahkan ini untuk membuat rata tengah */
+        }
+
+
+        .services h2 {
+                font-size: 36px;
+                margin-bottom: 20px;
+         }
+
+        .blog h2{
+                font-size: 36px;
+                margin-bottom: 20px;
+        }
+
+        .services, .portfolio, .testimonials, .blog {
+            background-color: #f4f4f4;
+            margin-bottom: 20px;
+            background-color: #f4f4f4;
+                margin-bottom: 20px;
+                text-align: center; /* Tambahkan ini untuk membuat rata tengah */
+        }
+
+        .news{
+            background-color: #f4f4f4;
+                margin-bottom: 20px;
+                text-align: center; /* Tambahkan ini untuk membuat rata tengah */
+        }
+
+        .services h2, .portfolio h2, .testimonials h2, .news h2 {
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .services img, .portfolio img, .testimonials img, .news img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 20px;
+            
+        }
+
+        footer .social-icons a {
+            color: #fff;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            header .menu {
+                float: none;
+                text-align: center;
+                margin-top: 10px;
+            }
+
+            .banner h1 {
+                font-size: 36px;
+            }
+
+            .gallery img, .gallery video {
+                width: 150px;
+                height: 100px;
+            }
+
+            .about h2, .services h2, .blog-items h2, .portfolio h2, .testimonials h2, .news h2 {
+                font-size: 1rem;
+            }
+
+            .blog{
+            background-color: #847e7e;
+                margin-bottom: 20px;
+                text-align: center;
+                padding: 16px;
+                display: inline;
+                gap: 1rem;
+        }
+
+        .blog-items {
+            border-radius: 10px;
+            max-width: 50%;
+            margin-top: 20px;
+            background: white;
+            padding: 10px;
+        }
+        }
+
+        @media screen and (max-width: 600px){
+            .blog{
+            background-color: #847e7e;
+                margin-bottom: 20px;
+                padding: 16px;
+                display: inline;
+                gap: 1rem;
+        }
+
+        .blog-items {
+            border-radius: 10px;
+            max-width: 50%;
+            margin-top: 20px;
+            background: white;
+            padding: 10px;
+        }
+        }
+
+        @media screen and (max-width: 480px) {
+            .banner h1 {
+                font-size: 24px;
+            }
+
+            .gallery img, .gallery video {
+                width: 100px;
+                height: 75px;
+            }
+
+            .about h2, .services h2, .blog-item h2, .portfolio h2, .testimonials h2, .news h2 {
+                font-size: 24px;
+            }
+
+            .blog{
+            background-color: #847e7e;
+                margin-bottom: 20px;
+                text-align: center;
+                padding: 16px;
+                display: inline;
+                gap: 1rem;
+        }
+
+        .blog-items {
+            border-radius: 10px;
+            max-width: 50%;
+            margin-top: 20px;
+            background: white;
+            padding: 10px;
+        }
+        }
+
+        .container-testi{
+            display: flex;
+            justify-content: space-around;
+            gap: 2rem;
+        }
+
+        .testi-items{
+            max-width: 25%;
+        }
+
+        .blog{
+            background-color: #847e7e;
+                margin-bottom: 20px;
+                text-align: center;
+                padding: 16px;
+                display: flex;
+                gap: 1rem;
+                justify-content: space-around;
+        }
+
+        .blog-items {
+            border-radius: 10px;
+            max-width: 25%;
+            margin-top: 20px;
+            background: white;
+            padding: 10px;
+        }
+
+        .blog-items p{
+            font-size: 0.5rem;
+        }
+
+        .btnCategory{
+            background-color: #847e7e;
+            color: #f4f4f4;
+            font-size: 1.2rem;
+            border-radius: 1rem;
+                margin-bottom: 20px;
+                text-align: center;
+                padding: 16px;
+                display: flex;
+                gap: 1rem;
+                justify-content: space-around;
+                text-decoration: none;
+                cursor: pointer;
+
+        }
+
+        .btnCategory:hover{
+            background-color: white;
+            color: #847e7e;
+            transition: all ease-in-out 0.5s ;
+            
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <h1>WebtechID</h1>
+        </div>
+        <nav class="menu">
+            <a href="#">Home</a>
+            <a href="#">Blog</a>
+            <a href="#">Portfolio</a>
+            <a href="#">Contact</a>
+            <a href="pages/admin.html">Dashboard</a>
+        </nav>
+    </header>
+
+    <!-- Banner -->
+    <div class="banner">
+        <h1>Welcome to WebTech Indonesia</h1>
+    </div>
+
+    <!-- Gallery -->
+    <div class="gallery">
+        <img src="MEDIA_FILES/IMAGES/images (1).jpg" alt="Image 1">
+        <img src="MEDIA_FILES/IMAGES/images (3).jpg" alt="Image 2">
+        <img src="MEDIA_FILES/IMAGES/images (2).jpg" alt="Image 3">
+    </div>
+
+    <!-- About -->
+    <div class="about">
+        <h2>About WebTech Indonesia</h2>
+        <p>WebTech Indonesia is a leading provider of innovative web solutions. We specialize in creating
+            state-of-the-art websites and web applications tailored to your business needs.</p>
+        <img style="border-radius: 10px;" src="MEDIA_FILES/IMAGES/images (9).jpg" width="250rem" alt="About Image">
+    </div>
+
+    <!-- Services -->
+    <section class="services">
+        <h2>Our Services</h2>
+        <p>Explore our range of services designed to help your business grow.</p>
+        <img src="MEDIA_FILES/IMAGES/images (12).jpg" width="200px" alt="Services Image">
+    </section>
+
+    <!-- BLog -->
+    <h2 style="text-align: center; background: #f4f4f4; padding: 8px; margin-bottom: 0px; font-size: 2rem;">Blog</h2>
+    <h2 style="text-align: center; margin-top: 0; background: #f4f4f4; padding: 8px; margin-bottom: 0px; font-size: 2rem;">The Most Pupular Blog Post For Today Is</h2>
+    <div class="blog">
+    <div class="blog-items">
+        <h2>Inovasi Teknologi Terbaru</h2>
+        <p>Tahun 2024 telah menjadi saksi kemajuan teknologi yang luar biasa. Dari perkembangan kecerdasan buatan (AI) hingga penerapan energi terbarukan yang lebih efisien, berbagai inovasi teknologi ini tidak hanya mengubah industri tetapi juga cara hidup kita sehari-hari. Berikut adalah beberapa inovasi paling signifikan yang muncul di tahun ini.</p>
+        <img src="MEDIA_FILES/IMAGES/images (6).jpg"
+        width="40%" alt="">
+        <h4>Haqi</h4>
+        <h4>08/09/2008</h4>
+        <h4>290k View</h4>
+        <a href="pages/blog1.html" style="position: relative; bottom: -20px;" class="btnCategory">Read More</a>
+    </div>
+    <div class="blog-items">
+        <h2>Masa Depan Virtual Reality</h2>
+        <p>Virtual Reality (VR) telah menjadi salah satu inovasi teknologi paling menarik dan transformatif dalam beberapa tahun terakhir. Sejak kemunculannya, VR telah berkembang pesat dan menawarkan pengalaman yang tak tertandingi dalam berbagai bidang, mulai dari hiburan hingga pendidikan dan kesehatan. Dalam artikel ini, kita akan mengeksplorasi perkembangan terbaru dalam VR, potensinya untuk masa depan.</p>
+        <img src="MEDIA_FILES/IMAGES/images (1).jpg"
+        width="40%" alt="">
+        <h4>Ali</h4>
+        <h4>14/03/2005</h4>
+        <h4>290k View</h4>
+        <a href="pages/blog2.html" class="btnCategory">Read More</a>
+    </div>
+    <div class="blog-items">
+        <h2>AI Mengambil Alih Manusia?</h2>
+        <p>Seiring dengan perkembangan pesat dalam bidang kecerdasan buatan (AI), pertanyaan tentang apakah AI akan mengambil alih peran manusia dalam berbagai aspek kehidupan semakin sering muncul. Dari pekerjaan rutin hingga keputusan bisnis strategis, AI telah menunjukkan kemampuannya yang luar biasa. Namun, di balik semua potensi ini, muncul juga kekhawatiran bahwa AI suatu hari nanti bisa menggantikan manusia.</p>
+        <img src="MEDIA_FILES/IMAGES/images (7).jpg"
+        width="40%" height="115rem" alt="">
+        <h4>Affuan</h4>
+        <h4>17/6/2025</h4>
+        <h4>290k View</h4>
+        <a href="pages/blog3.html" class="btnCategory" style="position: relative; bottom: 3px;">Read More</a>
+    </div>
+    </div>
+    <h2 style="text-align: center; margin-top: 0; background: #f4f4f4; padding: 8px; margin-top: 0px; font-size: 2rem;">Categories</h2>
+    <div style="display: flex; justify-content: space-around; padding: 8px;">
+        <button class="btnCategory">Technology</button>
+        <button class="btnCategory">Politics</button>
+        <button class="btnCategory">Economy</button>
+    </div>
+    <h2 style="text-align: center; margin-top: 0; background: #f4f4f4; padding: 8px; margin-top: 0px; font-size: 2rem;">Tag Clouds</h2>
+    <div>
+
+    </div>
+
+    <!-- Portfolio -->
+    <section class="portfolio">
+        <h2>Our Portfolio</h2>
+        <p>Take a look at our previous work to see how we can help you.</p>
+        <img src="MEDIA_FILES/IMAGES/images (5).png" width="150px" alt="Portfolio Image">
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <h2>Testimonials</h2>
+        <p>See what our clients have to say about us.</p>
+        <div class="container-testi">
+            <div class="testi-items">
+                    <h3>John Doe</h3>
+                    <p>"WebTech Indonesia has been a game-changer for our business. Their expertise and creativity have exceeded our expectations."</p>
+            </div>
+            <div class="testi-items">
+                    <h3>John DE</h3>
+                    <p>"What A GOOD WEBSITE SKIBIDI SIGMA"</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- News -->
+    <section class="news">
+        <h2>Latest News</h2>
+        <p>Stay updated with our latest news and announcements.</p>
+        <img src="MEDIA_FILES/IMAGES/images (4).png   " alt="News Image">
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="social-icons">
+            <a href="#"><img src="MEDIA_FILES/SOCIAL_MEDIA/Black and White/facebook.png" alt="" width="30px">Facebook</a>
+            <a href="#"><img src="MEDIA_FILES/SOCIAL_MEDIA/Black and White/twitter.png" alt="" width="30px">Twitter</a>
+            <a href="#"><img src="MEDIA_FILES/SOCIAL_MEDIA/Black and White/linkedin.png" alt="" width="30px">Linkedin</a>
+        </div>
+        <p>© 2024 WebTech Indonesia. Designed by: Your Name</p>
+    </footer>
+
+</body>
+
+</html>

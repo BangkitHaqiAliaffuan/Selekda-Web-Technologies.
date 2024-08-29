@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    padding: 15px 20px;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.search-bar input[type="text"] {
+    padding: 7px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: none;
+    width: 300px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.user-name {
+    font-size: 16px;
+}
+
+.container {
+    display: flex;
+    margin-top: 20px;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #444;
+    padding: 20px;
+    height: 100vh;
+    color: #fff;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    margin-bottom: 15px;
+}
+
+.sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    padding: 10px;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+.sidebar ul li a:hover {
+    background-color: #555;
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+}
+
+.chart {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    text-align: center;
+}
+
+.chart-placeholder {
+    height: 200px;
+    background-color: #e0e0e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: #888;
+}
+
+.logo a{
+    text-decoration: none;
+    color: white;
+}
+
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">
+            <a href="../index.html">
+            <h1>Your Logo</h1>
+            </a>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search...">
+        </div>
+        <div class="user-info">
+            <img src="../MEDIA_FILES/IMAGES/images (10).jpg" alt="User Avatar" class="user-avatar">
+            <span class="user-name">Admin</span>
+        </div>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar">
+            <ul>
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#">Analytics</a></li>
+                <li><a href="#">Users</a></li>
+                <li><a href="#">Settings</a></li>
+                <li><a href="#">Logout</a></li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+            <div class="stats">
+                <div class="chart">
+                    <h2>Chart 1</h2>
+                    <div class="chart-placeholder">[Chart 1]</div>
+                </div>
+                <div class="chart">
+                    <h2>Chart 2</h2>
+                    <div class="chart-placeholder">[Chart 2]</div>
+                </div>
+                <div class="chart">
+                    <h2>Chart 3</h2>
+                    <div class="chart-placeholder">[Chart 3]</div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

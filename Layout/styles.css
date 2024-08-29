@@ -1,0 +1,362 @@
+body {
+    font-family: monospace;
+    margin: 0;
+    padding: 0;
+    
+    background-repeat: no-repeat;
+    color: white;
+}
+
+.title{
+    font-style: italic;
+        
+}
+
+.home{
+    background-image: linear-gradient(to bottom, #3a41c3, #d2d3e3);
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+.nav-menus{
+    display: flex;
+    
+}
+
+.nav-menus ul{
+    display: flex;
+    justify-content: center;
+}
+
+nav {
+    display: flex;
+    padding: 10px 20px;
+    margin-right: 10%;
+    justify-content: center; 
+    align-items: center;
+    position: fixed;
+}
+
+nav h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    margin-left: 13rem;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.isiBanner{
+    margin-top: 100px;
+}
+
+.banner {
+    padding: 20px;
+    height: 350px;
+    opacity: 1;
+    background-image: url('img/meeting.jpeg');
+    border-radius: 30px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    margin-top: 100px;
+    width: 95%;
+}
+
+.banner h2 {
+    font-size: 30px;
+}
+
+.banner p {
+    font-size: 18px;
+}
+
+.banner button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: white;
+    color: #4e54c8;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+main {
+    padding: px 0;
+}
+
+.gallery {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 20rem;
+}
+
+.gallery-item {
+    width: 22%;
+    margin: 20px 0;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.gallery-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.content {
+    width: 900px;
+    height: 550px;
+    justify-content: center;
+    display: flex;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;  /* Add this line */
+    top: 300px;
+    margin-left: 1rem;
+    margin-right: 1rem;  /* Adjust the value as needed */
+}
+
+.image-container {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.image-container img {
+    width: 120%;
+    border-radius: 10px;
+    margin-top: 20px;
+    border: 5px solid #0000ff;
+}
+
+.text-container {
+    flex: 2;
+    margin-left: 6rem;
+}
+
+.text-container h2 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.text-container p {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.6;
+}
+
+.aboutUs{
+    margin-top: 0;
+    height: 90rem;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(to bottom, #d2d3e3, #4e54c8);
+    background: linear-gradient(to right);
+}
+
+.search-bar {
+    position: relative;
+    top: 25px;
+    margin-left: 2rem;
+    margin-right: 6rem;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 10px 20px;
+    border-radius: 25px;
+    border: solid black;
+    outline: none;
+    font-size: 16px;
+}
+
+.search-bar input::placeholder {
+    color: #010000;
+}
+
+.search-bar svg {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    color: #ccc;
+    font-size: 20px;
+}
+
+.news-section {
+    margin-top: 9rem;
+    float: left;
+}
+
+.news-section h2 {
+    color: white;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.news-item {
+    margin-left: 3rem;
+    margin-right: 3rem;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    justify-content: end;
+    margin-top: 2rem;
+    margin-bottom: 20px;
+    transition: transform 0.3s;
+}
+
+.news-item:hover {
+    transform: translateY(-5px);
+    background-color: #3a41c3;
+    color: white;
+    transition: all ease-in-out 0.5s;
+}
+
+.news-item img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.news-item-content {
+    padding: 20px;
+    flex-grow: 1;
+}
+
+.news-item-content h3 {
+    font-size: 18px;
+    margin: 0;
+    color: #333;
+}
+
+.news-item-content p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #888;
+}
+
+.news{
+    position: relative;
+    height: 200rem;
+    width: 100%;
+    background: linear-gradient(to bottom, #4e54c8 25%, #DE0000 );
+}
+
+.title-news{
+    text-align: center;
+    margin-top: 12rem;
+    font-size: 2em;
+    float: left;
+    padding: 100px;
+    width: 20rem;
+    height: 20rem;
+    margin-left: 2em;
+    align-items: center;
+    display: flex;
+    font-size: 4rem;
+}
+
+.services-section {
+    margin-top: 200px;
+    float: right;
+}
+
+.services-section h2 {
+    color: white;
+    font-size: 40px;
+}
+
+.services-list {
+    flex-grow: 1;
+    margin-left: 20px;
+}
+
+.service-item {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    margin-bottom: 20px;
+    transition: transform 0.3s;
+    box-shadow: 0 10px 10px rgba(41, 41, 52, 0.5);
+}
+
+.service-item:hover, .service-item-content:hover{
+    transform: translateY(-5px);
+    background-color: #de0000ad;
+    color: white;
+    transition: all ease-in-out 0.5s;
+}
+
+.service-item img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.service-item-content {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.service-item-content h3 {
+    font-size: 18px;
+    margin: 0;
+    color: #333;
+}
+
+
+
+.title-services{
+    float: right;
+    text-align: center;
+    margin-top: 9rem;
+    font-size: 2em;
+    padding: 100px;
+    width: 20rem;
+    margin-right: 14rem;
+    height: 20rem;
+    margin-left: 2rem;
+    align-items: center;
+    display: flex;
+    font-size: 4rem;
+}
+
+@media only screen and (max-width: 600px) {
+    .title-services{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+    .nav-menus{
+        display: none;
+        margin-right: 3%;
+    }
+}
