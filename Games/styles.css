@@ -46,6 +46,10 @@ body {
     margin: 10px 0;
 }
 
+.welcome-screen{
+    padding: 30px;
+}
+
 .welcome-screen input,
 .welcome-screen select {
     margin: 5px 0;
@@ -177,7 +181,6 @@ body {
 .opponent {
     width: 60px;
     height: 100px;
-    background-color: #2196f3;
     position: absolute;
     bottom: 50px; /* Adjust as needed */
 }
@@ -194,6 +197,10 @@ body {
     width: 7rem;
     right: 50px;
     bottom: 90px;
+}
+
+.game-screen{
+    padding: 20px;
 }
 
 .game-board{
