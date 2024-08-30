@@ -1,0 +1,201 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212; /* Dark mode background */
+    color: #e0e0e0;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.hidden {
+    display: none;
+}
+
+.welcome-screen,
+.game-screen {
+    width: 1000px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Welcome Screen Styles */
+.welcome-screen h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.welcome-screen form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.welcome-screen label {
+    margin: 10px 0;
+}
+
+.welcome-screen input,
+.welcome-screen select {
+    margin: 5px 0;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #333;
+    border-radius: 5px;
+    background-color: #2c2c2c;
+    color: #e0e0e0;
+}
+
+#welcomeForm button {
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    background-color: #4caf50;
+    color: white;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#welcomeForm button:disabled {
+    background-color: #aaa;
+    cursor: not-allowed;
+}
+
+#welcomeForm button:hover:not(:disabled) {
+    background-color: #45a049;
+}
+
+/* Instructions Popup Styles */
+#instructionsPopup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 500px;
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+#instructionsPopup h2 {
+    margin-bottom: 10px;
+}
+
+#instructionsPopup button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4caf50;
+    color: white;
+    cursor: pointer;
+}
+
+#instructionsPopup button:hover {
+    background-color: #45a049;
+}
+
+/* Game Screen Styles */
+.game-board {
+    width: 100%;
+    height: 100%;
+    background-image: url('game-background.jpg'); /* Replace with your background image */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.score-board {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: #e0e0e0;
+    font-size: 1.5em;
+}
+
+#pausePopup,
+#gameOverPopup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 500px;
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+#pausePopup h2,
+#gameOverPopup h2 {
+    margin-bottom: 10px;
+}
+
+#pausePopup button,
+#gameOverPopup button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4caf50;
+    color: white;
+    cursor: pointer;
+}
+
+#pausePopup button:hover,
+#gameOverPopup button:hover {
+    background-color: #45a049;
+}
+
+/* Ball and Character Styles */
+.ball {
+    width: 50px;
+    height: 50px;
+    background-color: #ff5722;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.player,
+.opponent {
+    width: 60px;
+    height: 100px;
+    background-color: #2196f3;
+    position: absolute;
+    bottom: 50px; /* Adjust as needed */
+}
+
+.player {
+    position: absolute;
+    width: 7rem;
+    left: 50px;
+    bottom: 90px;
+}
+
+.opponent {
+    position: absolute;
+    width: 7rem;
+    right: 50px;
+    bottom: 90px;
+}
+
+.game-board{
+    background-image: url(MEDIA_FILES/GAME_MEDIA/Sprites/background1.jpg);
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DSGN Illustration App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Welcome Screen -->
+    <div id="welcome-screen" class="welcome-screen">
+        <div class="welcome-content">
+            <img src="MEDIA_FILES/IMAGES/images (1).jpg" alt="DSGN Logo" class="logo">
+            <h1>DSGN Illustration App</h1>
+        </div>
+    </div>
+
+    <!-- Main Application -->
+    <div id="app" class="app hidden">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">DSGN</div>
+            <div class="toolbar">
+                <button id="zoom-in">Zoom In</button>
+                <button id="zoom-out">Zoom Out</button>
+                <button id="undo">Undo</button>
+                <button id="redo">Redo</button>
+                <button id="export">Export</button>
+                <button id="import">Import</button>
+            </div>
+        </header>
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="toolbar">
+                <button id="brush-tool">Brush</button>
+                <button id="eraser-tool">Eraser</button>
+                <button id="move-tool">Move</button>
+                <button id="shape-tool">Shape</button>
+                <button id="color-picker-tool">Color Picker</button>
+                <button id="paint-bucket-tool">Paint Bucket</button>
+                <button id="text-tool">Text</button>
+                <button id="clone-stamp-tool">Clone Stamp</button>
+            </div>
+            <div class="layer-bar">
+                <h3>Layers</h3>
+                <ul id="layer-list">
+                    <!-- Layers will be dynamically added here -->
+                </ul>
+            </div>
+        </aside>
+
+        <!-- Work Area -->
+        <main class="work-area">
+            <canvas id="canvas" width="1280" height="600"></canvas>
+        </main>
+
+        <!-- Properties Bar -->
+        <aside class="properties-bar">
+            <div id="brush-properties" class="tool-properties hidden">
+                <label for="brush-size">Brush Size: </label>
+                <input type="range" id="brush-size" min="1" max="100" value="10">
+                <label for="brush-opacity">Brush Opacity: </label>
+                <select id="brush-opacity">
+                    <option value="0">0%</option>
+                    <option value="50">50%</option>
+                    <option value="100">100%</option>
+                </select>
+                <label for="brush-shape">Brush Shape: </label>
+                <select id="brush-shape">
+                    <option value="round">Round</option>
+                    <option value="square">Square</option>
+                </select>
+            </div>
+
+            <div id="eraser-properties" class="tool-properties hidden">
+                <label for="eraser-size">Eraser Size: </label>
+                <input type="range" id="eraser-size" min="1" max="100" value="10">
+                <label for="eraser-opacity">Eraser Opacity: </label>
+                <select id="eraser-opacity">
+                    <option value="0">0%</option>
+                    <option value="50">50%</option>
+                    <option value="100">100%</option>
+                </select>
+            </div>
+
+            <div id="text-properties" class="tool-properties hidden">
+                <label for="text-font">Font: </label>
+                <select id="text-font">
+                    <option value="Arial">Arial</option>
+                    <option value="Verdana">Verdana</option>
+                    <option value="Times New Roman">Times New Roman</option>
+                </select>
+                <label for="text-size">Size: </label>
+                <input type="number" id="text-size" value="16">
+                <label for="text-style">Style: </label>
+                <select id="text-style">
+                    <option value="">Normal</option>
+                    <option value="bold">Bold</option>
+                    <option value="italic">Italic</option>
+                    <option value="underline">Underline</option>
+                </select>
+            </div>
+        </aside>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Head Football</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Welcome Screen -->
+    <div class="welcome-screen">
+        <h1>Welcome to World Head Football</h1>
+        <form id="welcomeForm">
+            <label for="playerName">Enter your name:</label>
+            <input type="text" id="playerName" placeholder="Your Name">
+            <br>
+            <label for="levelSelect">Select Level:</label>
+            <select id="levelSelect">
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+            </select>
+            <br>
+            <label for="ballSelect">Select Ball:</label>
+            <select id="ballSelect">
+                <option value="ball1">Ball 1</option>
+                <option value="ball2">Ball 2</option>
+            </select>
+            <br>
+            <label for="countrySelect">Select Your Country:</label>
+            <select id="countrySelect">
+                <!-- Add options for different countries here -->
+                <option value="country1">Country 1</option>
+                <option value="country2">Country 2</option>
+                <!-- Add more countries as needed -->
+            </select>
+            <br>
+            <button type="button" id="randomOpponent">Randomize Opponent</button>
+            <br>
+            <button type="button" id="playGame" disabled>Play Game</button>
+        </form>
+        <button id="showInstructions">Instructions</button>
+    </div>
+
+    <!-- Instructions Popup -->
+    <div id="instructionsPopup" class="hidden">
+        <h2>Instructions</h2>
+        <p>Instructions content goes here...</p>
+        <button id="closeInstructions">X</button>
+    </div>
+
+    <!-- Game Screen -->
+    <div class="game-screen hidden">
+        <div class="game-board">
+            <img class="player" src="MEDIA_FILES/GAME_MEDIA/Sprites/Characters/Character 03 - Spain/Idle/Idle_000.png" alt="">
+            <img class="opponent" src="MEDIA_FILES/GAME_MEDIA/Sprites/Characters/Character 03 - Spain/Idle/Idle_000.png" alt="">
+            <!-- Game elements will be dynamically added here -->
+        </div>
+        <div class="score-board">
+            <p id="score">Score: 0</p>
+            <p id="timer">Time: 0</p>
+        </div>
+        <div id="pausePopup" class="hidden">
+            <h2>Game Paused</h2>
+            <button id="continueButton">Continue</button>
+            <button id="restartButton">Restart</button>
+            <button id="saveHistoryButton">Save Match History</button>
+            <button id="viewHistoryButton">View Match History</button>
+        </div>
+        <!-- Game Over Popup -->
+        <div id="gameOverPopup" class="hidden">
+            <h2>Game Over</h2>
+            <p>Username: <span id="gameOverUsername"></span></p>
+            <p>Country: <span id="gameOverCountry"></span></p>
+            <p>Score: <span id="gameOverScore"></span></p>
+            <button id="restartButton">Restart</button>
+            <button id="saveHistoryButton">Save Match History</button>
+            <button id="viewHistoryButton">View Match History</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
